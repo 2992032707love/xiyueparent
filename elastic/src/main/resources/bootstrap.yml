@@ -1,0 +1,16 @@
+server:
+  port: 8086
+spring:
+  application:
+    name: elastic
+  profiles:
+    active: register,rabbitmq,elastisearch
+  cloud:
+    nacos:
+      config:
+        server-addr: 192.168.204.121:8848
+        prefix: rts
+        file-extension: yml
+#elasticsearch:
+#  host: 192.168.204.121
+#  port: 9200

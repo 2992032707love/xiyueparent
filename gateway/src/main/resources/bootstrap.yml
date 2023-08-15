@@ -1,0 +1,45 @@
+server:
+  port: 8090
+spring:
+  application:
+    name: gateway
+  profiles:
+    active: register,gateway,white,redis
+  cloud:
+    nacos:
+      config:
+        server-addr: 192.168.204.121:8848
+        prefix: rts
+        file-extension: yml
+#xiyue:
+#  white:
+#    urls:
+#      - /umsUser/login
+#      - /umsUser/list
+#  cloud:
+#    nacos:
+#      discovery:
+#        server-addr: 192.168.204.121:8848
+#    gateway:
+#      discovery:
+#        locator:
+#          enabled: true
+#      routes:
+#        - id: admin
+#          uri: lb://admin
+#          predicates:
+#            - Path=/umsUser/**
+#        - id: product
+#          uri: lb://product
+#          predicates:
+#            - Path=/pmsAttr/**,/pmsBrand/**,/pmsCategory/**,/pmsProduct/**,/pmsSkus/**
+#        - id: RtsFile
+#          uri: lb://RtsFile
+#          predicates:
+#            - Path=/umsFile/**
+#      globalcors:
+#        cors-configurations:
+#          '[/**]':
+#            allowedOrigins: "http://localhost"
+#            allowedMethods: "*"
+#            allowedHeaders: "*"

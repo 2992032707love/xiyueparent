@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.rts.mapper.PmsShoppingCartMapper">
+    <select id="listByCustomId" resultType="com.rts.entity.ShoppingCartProductSkus">
+        SELECT DISTINCT
+            a.id ,
+            a.custom_id ,
+            a.product_id ,
+            a.skus_id ,
+            a.product_size ,
+            a.product_yuan ,
+            b.name ,
+            b.pic ,
+            c.item
+        FROM
+            pms_shopping_cart as a
+        INNER join pms_product as b on a.product_id = b.id
+        INNER JOIN pms_skus as c on a.skus_id = c.id
+        WHERE
+            a.custom_id = #{customId}
+        ORDER BY a.id DESC
+    </select>
+</mapper>

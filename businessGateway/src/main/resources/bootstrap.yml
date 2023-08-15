@@ -1,0 +1,13 @@
+server:
+  port: 8092
+spring:
+  application:
+    name: businessGateway
+  profiles:
+    active: register,business,whitethree,redis
+  cloud:
+    nacos:
+      config:
+        server-addr: 192.168.204.121:8848
+        prefix: rts
+        file-extension: yml

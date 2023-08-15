@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>xiyueparent</artifactId>
+        <groupId>com.rts</groupId>
+        <version>1.0</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>file</artifactId>
+<!--6:45-->
+    <packaging>jar</packaging>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.rts</groupId>
+            <artifactId>web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.rts</groupId>
+            <artifactId>mybatis</artifactId>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/io.minio/minio -->
+        <dependency>
+            <groupId>io.minio</groupId>
+            <artifactId>minio</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.squareup.okhttp3</groupId>
+                    <artifactId>okhttp</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.squareup.okhttp3/okhttp -->
+        <dependency>
+            <groupId>com.squareup.okhttp3</groupId>
+            <artifactId>okhttp</artifactId>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.aventrix.jnanoid/jnanoid -->
+        <dependency>
+            <groupId>com.aventrix.jnanoid</groupId>
+            <artifactId>jnanoid</artifactId>
+        </dependency>
+    </dependencies>
+</project>

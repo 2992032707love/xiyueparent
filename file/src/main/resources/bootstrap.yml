@@ -1,0 +1,13 @@
+server:
+  port: 8084
+spring:
+  application:
+    name: RtsFile
+  profiles:
+    active: datasource,upload,register
+  cloud:
+    nacos:
+      config:
+        server-addr: 192.168.204.121:8848
+        prefix: rts
+        file-extension: yml

@@ -1,0 +1,13 @@
+server:
+  port: 8085
+spring:
+  application:
+    name: email
+  profiles:
+    active: register,rabbitmq,email
+  cloud:
+    nacos:
+      config:
+        server-addr: 192.168.204.121:8848
+        prefix: rts
+        file-extension: yml

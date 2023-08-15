@@ -1,0 +1,15 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: product
+  profiles:
+    active: datasource,upload,register,redis
+  cloud:
+    nacos:
+      config:
+        server-addr: 192.168.204.121:8848
+        prefix: rts
+        file-extension: yml
+#alipay:
+#  app_id: 2021000121692750

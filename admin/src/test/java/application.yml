@@ -1,0 +1,36 @@
+#server:
+#  port: 8081
+#spring:
+#  application:
+#    name: admin
+#  cloud:
+#    nacos:
+#      discovery:
+#        server-addr: 192.168.204.121:8848
+#  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://192.168.204.121:3307/xiyue?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&useSSL=false&allowPublicKeyRetrieval=true
+#    username: root
+#    password: root
+#    hikari:
+#      maximum-pool-size: 20
+#      minimum-idle: 8
+#  servlet:
+#    multipart:
+#      # 设置传输大小
+#      max-file-size: 2048MB
+#      # 一次请求最多可以传多大
+#      max-request-size: 2048MB
+##    redis:
+##      host: 192.168.204.121
+##      # redis的默认端口为6379 ssdb为8888
+##      port: 8888
+#mybatis-plus:
+#  type-aliases-package: com.rts.entity
+#logging:
+#  level:
+#    com.rts.mapper: debug
+#upload:
+#  url: http://192.168.204.121:9000
+#  username: admin
+#  password: 123456789

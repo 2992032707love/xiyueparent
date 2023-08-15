@@ -1,0 +1,13 @@
+server:
+  port: 8091
+spring:
+  application:
+    name: customgateway
+  profiles:
+    active: register,custom,whitetwo,redis
+  cloud:
+    nacos:
+      config:
+        server-addr: 192.168.204.121:8848
+        prefix: rts
+        file-extension: yml
