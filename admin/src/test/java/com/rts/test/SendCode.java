@@ -101,5 +101,6 @@ public class SendCode {
         System.out.println("3" + Objects.equals(CODE, OLDCODE));
         System.out.println("4" + code.equals(OLDCODE));
         System.out.println(code.getClass().getName());
+        System.out.println(OLDCODE.getClass().getName());
     }
 }
