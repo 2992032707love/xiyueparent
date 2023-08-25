@@ -106,6 +106,7 @@ public class SendCode {
         System.out.println("验证码为：" + sendCode + "YZM为：" + YZM);
         YZM = sendCode;
         System.out.println("验证码为：" + YZM);
+        System.out.println("push test!");
     }
     public static String getSendCode() {
         log.info("验证码生成！！！！");
