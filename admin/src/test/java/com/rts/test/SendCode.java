@@ -103,7 +103,7 @@ public class SendCode {
         System.out.println(code.getClass().getName());
         System.out.println(OLDCODE.getClass().getName());
         String sendCode = getSendCode();
-        System.out.println("验证码为：" + sendCode);
+        System.out.println("验证码为：" + sendCode + "YZM为：" + YZM);
     }
     public static String getSendCode() {
         log.info("验证码生成！！！！");
