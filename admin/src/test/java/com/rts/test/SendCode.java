@@ -109,6 +109,7 @@ public class SendCode {
         System.out.println("push test!");
         System.out.println("pull test!");
         System.out.println("gitee test!");
+        System.out.println("gitee test two!");
     }
     public static String getSendCode() {
         log.info("验证码生成！！！！");
