@@ -102,5 +102,17 @@ public class SendCode {
         System.out.println("4" + code.equals(OLDCODE));
         System.out.println(code.getClass().getName());
         System.out.println(OLDCODE.getClass().getName());
+        String sendCode = getSendCode();
+        System.out.println("验证码为：" + sendCode);
+    }
+    public static String getSendCode() {
+        log.info("验证码生成！！！！");
+        StringBuilder builder = new StringBuilder();
+        Random random = new Random();
+        for (int i = 0; i < 6; i++) {
+            builder.append(random.nextInt(10));
+        }
+        System.out.println("验证码为："+builder.toString());
+        return builder.toString();
     }
 }
