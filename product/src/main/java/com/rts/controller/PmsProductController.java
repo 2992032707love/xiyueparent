@@ -1,10 +1,12 @@
 package com.rts.controller;
 
 
+import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import com.alibaba.fastjson.JSONObject;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.rts.common.ResultJson;
+import com.rts.core.SentinelUtill;
 import com.rts.entity.PmsProduct;
 import com.rts.entity.PmsSkus;
 import com.rts.mapper.PmsProductMapper;
@@ -305,7 +307,8 @@ public class PmsProductController {
      * @param value
      * @return
      */
-    @GetMapping("/listCustom")
+    @GetMapping("/listCustom")            // 哪个类(class对象)的哪个方法(以字符串的方式写这个方法的名字)兜底
+    @SentinelResource(value = "listCustom", blockHandlerClass = {SentinelUtill.class}, blockHandler = "handlerException")
     ResultJson listCustom(Integer pageNo, Integer pageSize, String value) {
         return ResultJson.success(pmsProductService.listCustom(pageNo, pageSize, value));
     }

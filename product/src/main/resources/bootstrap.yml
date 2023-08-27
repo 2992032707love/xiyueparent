@@ -11,5 +11,18 @@ spring:
         server-addr: 192.168.204.121:8848
         prefix: rts
         file-extension: yml
+    sentinel:
+      transport:
+        dashboard: 192.168.204.122:8858
+        port: 8719
+      datasource:
+        r1:
+          nacos:
+            server-addr: 192.168.204.121:8848
+            data-id: sentinel
+            group-id: DEFAULT_GROUP
+            data-type: json
+            # 用的是流控规则
+            rule-type: flow
 #alipay:
 #  app_id: 2021000121692750
