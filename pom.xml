@@ -22,6 +22,7 @@
         <module>generator</module>
         <module>customGateway</module>
         <module>businessGateway</module>
+        <module>elastic-search-learn</module>
         <!--        <module>generator</module>-->
     </modules>
     <packaging>pom</packaging>
