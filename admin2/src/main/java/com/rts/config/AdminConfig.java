@@ -1,12 +1,8 @@
 package com.rts.config;
 
-import com.alibaba.cloud.nacos.ribbon.NacosRule;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.web.cors.CorsConfiguration;
-import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
-import org.springframework.web.filter.CorsFilter;
 
 @Configuration
 public class AdminConfig {
@@ -24,5 +20,4 @@ public class AdminConfig {
 //        source.registerCorsConfiguration("/**", corsConfiguration);
 //        return new CorsFilter(source);
 //    }
-
 }
